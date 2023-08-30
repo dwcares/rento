@@ -1,0 +1,16 @@
+{
+  "name": "Rento",
+  "version": "0.0.1",
+  "description": "Rento ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dwcares",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "particle-api-js": "^7.2.3",
+    "socket.io": "^1.3.5"
+  }
+}
