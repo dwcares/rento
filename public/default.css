@@ -42,6 +42,7 @@ body {
     background: url('img/ring.png') no-repeat center;
     background-size:100%;
     background-position: 49.5% 51%;
+    z-index: 99;
 }
 
 .segmentDisp {
@@ -85,5 +86,7 @@ canvas {
     grid-row: 1;
     grid-column: 1;
     margin-bottom: 198px;
+    width: 500px;
+    height: 500px;
 }
 

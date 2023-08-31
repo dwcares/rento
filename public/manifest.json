@@ -1,0 +1,10 @@
+{
+    "name": "Rento",
+    "icons": [
+      {
+        "src": "img/512ico.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ]
+  }
