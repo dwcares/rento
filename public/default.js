@@ -9,7 +9,7 @@ var opts = {
     pointer: {
       length: .58, // Relative to gauge radius
       strokeWidth: 0.015, // The thickness
-      color: '#ff000099'
+      color: '#ff000099',
     },
     colorStart: '#6FADCF00',   // Colors
     colorStop: '#8FC0DA00',    // just experiment with them
