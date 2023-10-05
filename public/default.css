@@ -7,6 +7,17 @@ html {
     src: url('img/Segment7Standard.otf');
 }
 
+@font-face{
+    font-family: 'lcddot';
+    src: local('LCDDot TR Regular'), local('LCDDot-TR'),
+        url('img/LCDDot-TR.woff2') format('woff2'),
+        url('img/LCDDot-TR.woff') format('woff'),
+        url('img/LCDDot-TR.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 body {
     height: 100%;
@@ -81,6 +92,29 @@ body {
         color: #6c6c6c88;
     }
 
+.songInfo {
+   
+    font-family: 'lcddot';
+    font-size: 26pt;
+    width: 450px;
+    height: 100px;
+
+    color: #ff0000dd;
+    filter: blur(0.6px);
+    text-align: center;
+
+    transition: opacity ease-in-out 0.5s 0.5s;  
+    opacity: 1; 
+}   
+
+    .songInfo .songArtist {
+        margin-top: 5px;
+        font-size: 25px;
+    }
+
+    .songInfo.hidden {
+        opacity: 0;
+    }
 
 canvas {
     grid-row: 1;

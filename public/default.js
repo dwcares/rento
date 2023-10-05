@@ -25,6 +25,22 @@ socket.on('probeTempF', (e) => {
   updateGaugeValue(e)
 })
 
+socket.on('songInfo', (e) => {
+    document.querySelector('.songArtist').innerHTML = decodeHtml(e.artist)
+    document.querySelector('.songTitle').innerHTML = decodeHtml(e.title) 
+})
+
+
+socket.on('playbackStatus', (e) => {
+
+  if (e === 'PLAYING') {
+    document.querySelector('.songInfo').classList.remove('hidden')
+  } else {
+    document.querySelector('.songInfo').classList.add('hidden')
+  }
+
+})
+
 function updateGaugeValue(e) {
   document.querySelector('.dispValue').innerHTML = pad(parseFloat(e).toFixed(1)) + ' F'
   gauge.set(Math.min(Math.max(e*10, GAUGE_MIN), GAUGE_MAX))
@@ -33,4 +49,11 @@ function updateGaugeValue(e) {
 function pad(e) {
   return String(e).padStart(5, ' ')
 }
+
+function decodeHtml (html) {
+  var txt = document.createElement ('textarea');
+  txt.innerHTML = html;
+  return txt.value;
+}
+
 
